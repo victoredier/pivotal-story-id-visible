@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Pivotal Story ID Visible",
+  "version": "0.1.0",
+  "description": "A simple extension to show the pivotal id next of the title",
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["script.js"],
+    "matches": ["https://www.pivotaltracker.com/*"]
+  }],
+  "action": {
+    "default_icon": "pt-icon.png",
+    "default_title": "Show the pivotal id next of the title"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": { "16": "pt-icon.png",
+    "48": "pt-icon.png",
+   "128": "pt-icon.png" }
+}
